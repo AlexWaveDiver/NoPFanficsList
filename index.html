@@ -39,6 +39,20 @@
     fetch('graph_data.json')
       .then(response => response.json())
       .then(data => {
+
+        data.nodes.forEach(node => {
+          if (node.NSFW) {
+            node.color = {
+              background: '#ff69b4',
+              border: '#cc3366'
+            };
+          } else if (node.AU) {
+            node.color = {
+              background: '#999999',
+              border: '#666666'
+            };
+          }
+        });
         const options = {
           nodes: {
             shape: "box",
