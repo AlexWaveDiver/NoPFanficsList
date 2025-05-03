@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+  <meta charset='UTF-8'>
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">  
+
+  <style>
+    #mynetwork {
+  width: 100%;
+  height: 90vh;
+  border: 1px solid lightgray;
+}
+  </style>
+</head>
+
+<body>  
+<div id="popup" style="display:none; position:absolute; background:#222; color:white; padding:10px; border-radius:8px; z-index:10; box-shadow:0 2px 10px rgba(0,0,0,0.5);"></div>
+<div id="mynetwork"></div>
+  
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<script>
+  const data = {
+  "nodes": [
+    {
+      "id": "The Fincapping III",
+      "label": "The Fincapping III",
+      "group": "central"
+    },
+    {
+      "id": "Nature of Abandonment",
+      "label": "Nature of Abandonment",
+      "group": "primary"
+    },
+    {
+      "id": "Nature of Humanity",
+      "label": "Nature of Humanity",
+      "group": "primary"
+    },
+    {
+      "id": "Nature of a Giant",
+      "label": "Nature of a Giant",
+      "group": "primary"
+    },
+    {
+      "id": "Nature of Family",
+      "label": "Nature of Family",
+      "group": "primary"
+    },
+    {
+      "id": "The Hunter",
+      "label": "The Hunter",
+      "group": "primary"
+    },
+    {
+      "id": "End of the Line",
+      "label": "End of the Line",
+      "group": "primary"
+    },
+    {
+      "id": "Survivor's Guilt",
+      "label": "Survivor's Guilt",
+      "group": "primary"
+    },
+    {
+      "id": "Of Giants and Journalists",
+      "label": "Of Giants and Journalists",
+      "group": "primary"
+    },
+    {
+      "id": "The Aftermath",
+      "label": "The Aftermath",
+      "group": "primary"
+    },
+    {
+      "id": "Paper Chase",
+      "label": "Paper Chase",
+      "group": "primary"
+    },
+    {
+      "id": "Pack Bonding",
+      "label": "Pack Bonding",
+      "group": "primary"
+    },
+    {
+      "id": "Persistence Journalism",
+      "label": "Persistence Journalism",
+      "group": "primary"
+    },
+    {
+      "id": "Free to a Good Home",
+      "label": "Free to a Good Home",
+      "group": "primary"
+    },
+    {
+      "id": "Recipe for Disaster",
+      "label": "Recipe for Disaster",
+      "group": "primary"
+    },
+    {
+      "id": "Nature of Carcinization",
+      "label": "Nature of Carcinization",
+      "group": "primary"
+    },
+    {
+      "id": "Shell Games",
+      "label": "Shell Games",
+      "group": "primary"
+    },
+    {
+      "id": "Nature of Pets",
+      "label": "Nature of Pets",
+      "group": "primary"
+    },
+    {
+      "id": "The Nature of Pets: Resistance",
+      "label": "The Nature of Pets: Resistance",
+      "group": "primary"
+    },
+    {
+      "id": "Treat with Kindness",
+      "label": "Treat with Kindness",
+      "group": "primary"
+    },
+    {
+      "id": "For Want of a Friend",
+      "label": "For Want of a Friend",
+      "group": "secondary",
+  "url": "https://example.com/nature-of-abandonment"
+    },
+    {
+      "id": "An Abandoned Future",
+      "label": "An Abandoned Future",
+      "group": "secondary"
+    },
+    {
+      "id": "Bite the Hand",
+      "label": "Bite the Hand",
+      "group": "secondary"
+    },
+    {
+      "id": "Foundations of Humanity",
+      "label": "Foundations of Humanity",
+      "group": "secondary"
+    },
+    {
+      "id": "Finest Little Honky Tonk on Skalaga",
+      "label": "Finest Little Honky Tonk on Skalaga",
+      "group": "secondary"
+    },
+    {
+      "id": "The Rogue Chronicles",
+      "label": "The Rogue Chronicles",
+      "group": "secondary"
+    },
+    {
+      "id": "Child of Night",
+      "label": "Child of Night",
+      "group": "secondary"
+    },
+    {
+      "id": "Nature of Knights",
+      "label": "Nature of Knights",
+      "group": "secondary"
+    },
+    {
+      "id": "Legal Legends",
+      "label": "Legal Legends",
+      "group": "secondary"
+    },
+    {
+      "id": "Products for Predators",
+      "label": "Products for Predators",
+      "group": "secondary"
+    },
+    {
+      "id": "To Kill a Predator",
+      "label": "To Kill a Predator",
+      "group": "secondary"
+    },
+    {
+      "id": "Venili Fight Club",
+      "label": "Venili Fight Club",
+      "group": "secondary"
+    },
+    {
+      "id": "Venili Fight Squad",
+      "label": "Venili Fight Squad",
+      "group": "secondary"
+    },
+    {
+      "id": "The Pirate and The Prisoner",
+      "label": "The Pirate and The Prisoner",
+      "group": "secondary"
+    },
+    {
+      "id": "Made into Monsters",
+      "label": "Made into Monsters",
+      "group": "secondary"
+    },
+    {
+      "id": "Out of Our Elements",
+      "label": "Out of Our Elements",
+      "group": "secondary"
+    },
+    {
+      "id": "The Nature of Human",
+      "label": "The Nature of Human",
+      "group": "secondary"
+    },
+    {
+      "id": "Legal Malpractice",
+      "label": "Legal Malpractice",
+      "group": "secondary"
+    },
+    {
+      "id": "Curing Malpractice",
+      "label": "Curing Malpractice",
+      "group": "secondary"
+    },
+    {
+      "id": "Feathers of Deceit",
+      "label": "Feathers of Deceit",
+      "group": "secondary"
+    },
+    {
+      "id": "Wayward Odyssey",
+      "label": "Wayward Odyssey",
+      "group": "secondary"
+    },
+    {
+      "id": "Clear Skies",
+      "label": "Clear Skies",
+      "group": "secondary"
+    },
+    {
+      "id": "Love Languages",
+      "label": "Love Languages",
+      "group": "secondary"
+    },
+    {
+      "id": "Introduction to Terran Zoology",
+      "label": "Introduction to Terran Zoology",
+      "group": "secondary"
+    },
+    {
+      "id": "Of Mangos and Murder",
+      "label": "Of Mangos and Murder",
+      "group": "secondary"
+    },
+    {
+      "id": "Tight Money",
+      "label": "Tight Money",
+      "group": "secondary"
+    },
+    {
+      "id": "Playing by Ear",
+      "label": "Playing by Ear",
+      "group": "secondary"
+    },
+    {
+      "id": "Changing Times",
+      "label": "Changing Times",
+      "group": "secondary"
+    },
+    {
+      "id": "Blackriver Cases",
+      "label": "Blackriver Cases",
+      "group": "secondary"
+    }
+  ],
+  "edges": [
+    {
+      "from": "The Fincapping III",
+      "to": "Nature of Abandonment"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Nature of Humanity"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Nature of a Giant"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Nature of Family"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "The Hunter"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "End of the Line"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Survivor's Guilt"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Of Giants and Journalists"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "The Aftermath"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Paper Chase"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Pack Bonding"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Persistence Journalism"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Free to a Good Home"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Recipe for Disaster"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Nature of Carcinization"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Shell Games"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Nature of Pets"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "The Nature of Pets: Resistance"
+    },
+    {
+      "from": "The Fincapping III",
+      "to": "Treat with Kindness"
+    },
+    {
+      "from": "Nature of Abandonment",
+      "to": "For Want of a Friend"
+    },
+    {
+      "from": "Nature of Abandonment",
+      "to": "An Abandoned Future"
+    },
+    {
+      "from": "Nature of Humanity",
+      "to": "Bite the Hand"
+    },
+    {
+      "from": "Nature of Humanity",
+      "to": "Foundations of Humanity"
+    },
+    {
+      "from": "Nature of a Giant",
+      "to": "Finest Little Honky Tonk on Skalaga"
+    },
+    {
+      "from": "Nature of a Giant",
+      "to": "The Rogue Chronicles"
+    },
+    {
+      "from": "Nature of a Giant",
+      "to": "Nature of a Giant"
+    },
+    {
+      "from": "Nature of Family",
+      "to": "Child of Night"
+    },
+    {
+      "from": "Nature of Family",
+      "to": "Nature of Knights"
+    },
+    {
+      "from": "The Hunter",
+      "to": "Legal Legends"
+    },
+    {
+      "from": "The Hunter",
+      "to": "Products for Predators"
+    },
+    {
+      "from": "The Hunter",
+      "to": "To Kill a Predator"
+    },
+    {
+      "from": "Venlil Fight Club",
+      "to": "Venlil Fight Squad"
+    },
+    {
+      "from": "The Pirate and The Prisoner",
+      "to": "Made into Monsters"
+    },
+    {
+      "from": "The Pirate and The Prisoner",
+      "to": "Out of Our Elements"
+    },
+    {
+      "from": "The Pirate and The Prisoner",
+      "to": "The Fincapping III"
+    },
+    {
+      "from": "The Pirate and The Prisoner",
+      "to": "The Nature of Human"
+    },
+    {
+      "from": "Legal Malpractice",
+      "to": "Curing Malpractice"
+    },
+    {
+      "from": "Feathers of Deceit",
+      "to": "Wayward Odyssey"
+    },
+    {
+      "from": "Feathers of Deceit",
+      "to": "Clear Skies"
+    },
+    {
+      "from": "Love Languages",
+      "to": "Introduction to Terran Zoology"
+    },
+    {
+      "from": "Out of Our Elements",
+      "to": "Of Mangos and Murder"
+    },
+    {
+      "from": "Of Mangos and Murder",
+      "to": "Tight Money"
+    },
+    {
+      "from": "Playing by Ear",
+      "to": "Changing Times"
+    },
+    {
+      "from": "Blackriver Cases",
+      "to": "Legal Legends"
+    }
+  ]
+};
+
+  const options = {
+    nodes: {
+      shape: "box",
+      font: { color: "white" }
+    },
+    groups: {
+      central: { color: { background: "#444", border: "#222" } },
+      primary: { color: { background: "#1f77b4", border: "#17406d" } },
+      secondary: { color: { background: "#2ca02c", border: "#1e6823" } },
+      default: { color: { background: "#999", border: "#666" } }
+    },
+    physics: {
+      stabilization: true
+    }
+  };
+
+  const container = document.getElementById("mynetwork");
+  const network = new vis.Network(container, data, options);
+
+
+network.on("click", function (params) {
+  const popup = document.getElementById("popup");
+    popup.style.display = "none";
+
+  if (params.nodes.length > 0) {
+    const nodeId = params.nodes[0];
+    const node = data.nodes.find(n => n.id === nodeId);
+
+    if (node && node.url) {
+      const pointer = params.pointer.DOM;
+      popup.innerHTML = `
+        <strong>${node.label}</strong><br>
+        <a href="${node.url}" target="_blank" style="color:lightblue;">Open Link</a>
+      `;
+      popup.style.left = pointer.x + 10 + "px";
+      popup.style.top = pointer.y + 10 + "px";
+      popup.style.display = "block";
+    }
+  } else {
+    popup.style.display = "none";
+  }
+});
+</script>
+</body>
+
+</html>
