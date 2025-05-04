@@ -42,7 +42,7 @@
     },
     {
       "id": "R7jzbRXe7DqDLjw-dyfl-17",
-      "label": "An Introduction to Terran Zoology",
+      "label": "Intro to Terran Zoology",
       "NSFW": false,
       "AU": false,
       "url": "https://www.reddit.com/r/NatureofPredators/comments/11sf8jb/nop_fanfic_an_introduction_to_terran_zoology/",
@@ -194,7 +194,7 @@
     },
     {
       "id": "R7jzbRXe7DqDLjw-dyfl-59",
-      "label": "A Legal Symphony: Song Of The People!",
+      "label": "A Legal Symphony",
       "NSFW": false,
       "AU": false,
       "url": "https://www.reddit.com/r/NatureofPredators/comments/1dl2b92/a_legal_symphony_song_of_the_people_chapter_1_on/",
@@ -465,14 +465,6 @@
       "author": "BainWrites"
     },
     {
-      "id": "R7jzbRXe7DqDLjw-dyfl-148",
-      "label": "Hazardous Recovery",
-      "NSFW": false,
-      "AU": false,
-      "url": "https://www.reddit.com/r/NatureofPredators/comments/142250x/hazardous_recovery_7_an_nop_story_part_1_smoke/",
-      "author": "Xerxes250"
-    },
-    {
       "id": "R7jzbRXe7DqDLjw-dyfl-152",
       "label": "Changing Times",
       "NSFW": false,
@@ -671,6 +663,70 @@
       "AU": true,
       "url": "https://www.reddit.com/r/NatureofPredators/comments/17248vv/nature_of_carcinization_chapter_5_capital/",
       "author": "OmegaOmnimon02"
+    },
+    {
+      "id": "8xFQxldSUPKBKKofMD4G-1",
+      "label": "Long Dark Dawn",
+      "NSFW": false,
+      "AU": false,
+      "url": "https://www.reddit.com/r/NatureofPredators/comments/1e3t0ks/the_long_dark_dawn_prologue/",
+      "author": "United_Patriots"
+    },
+    {
+      "id": "8xFQxldSUPKBKKofMD4G-3",
+      "label": "Common Problem",
+      "NSFW": false,
+      "AU": false,
+      "url": "https://www.reddit.com/r/NatureofPredators/comments/1hpsytp/common_problems_an_aan_sidestory_chapter_1/",
+      "author": "ImaginationSea3679"
+    },
+    {
+      "id": "8xFQxldSUPKBKKofMD4G-8",
+      "label": "One of Us",
+      "NSFW": false,
+      "AU": false,
+      "url": "https://www.reddit.com/r/NatureofPredators/comments/1ke817j/one_of_us_apex_phenomenonvenlil_fight_club/",
+      "author": "Randox_Talore"
+    },
+    {
+      "id": "8xFQxldSUPKBKKofMD4G-9",
+      "label": "Apex Phenomenon",
+      "NSFW": false,
+      "AU": false,
+      "url": "https://www.reddit.com/r/NatureofPredators/comments/1kas1gk/apex_phenomenon_tarva_monologue/",
+      "author": "Randox_Talore"
+    },
+    {
+      "id": "8xFQxldSUPKBKKofMD4G-13",
+      "label": "The Bloody Tomes",
+      "NSFW": false,
+      "AU": false,
+      "url": "https://www.reddit.com/r/NatureofPredators/comments/18k33cf/the_blood_tomes_index/",
+      "author": "JulianSkies"
+    },
+    {
+      "id": "R7jzbRXe7DqDLjw-dyfl-148",
+      "label": "Hazardous Recovery",
+      "NSFW": false,
+      "AU": false,
+      "url": "https://www.reddit.com/r/NatureofPredators/comments/142250x/hazardous_recovery_7_an_nop_story_part_1_smoke/",
+      "author": "Xerxes250"
+    },
+    {
+      "id": "8xFQxldSUPKBKKofMD4G-35",
+      "label": "Foxholes",
+      "NSFW": false,
+      "AU": false,
+      "url": "https://www.reddit.com/r/NatureofPredators/comments/12b3tcz/foxholes_ch_1_nop_fanfic/",
+      "author": "uktabi"
+    },
+    {
+      "id": "8xFQxldSUPKBKKofMD4G-37",
+      "label": "Transformative Extinction",
+      "NSFW": false,
+      "AU": false,
+      "url": "https://www.reddit.com/r/NatureofPredators/comments/1iqq2ir/transformative_extinction_open_au_oneshot/",
+      "author": "Heroman3003"
     }
   ],
   "edges": [
@@ -1070,11 +1126,6 @@
       "label": ""
     },
     {
-      "from": "R7jzbRXe7DqDLjw-dyfl-30",
-      "to": "R7jzbRXe7DqDLjw-dyfl-159",
-      "label": ""
-    },
-    {
       "from": "R7jzbRXe7DqDLjw-dyfl-161",
       "to": "R7jzbRXe7DqDLjw-dyfl-66",
       "label": ""
@@ -1150,11 +1201,6 @@
       "label": ""
     },
     {
-      "from": "R7jzbRXe7DqDLjw-dyfl-159",
-      "to": "R7jzbRXe7DqDLjw-dyfl-194",
-      "label": ""
-    },
-    {
       "from": "R7jzbRXe7DqDLjw-dyfl-194",
       "to": "R7jzbRXe7DqDLjw-dyfl-144",
       "label": ""
@@ -1162,11 +1208,6 @@
     {
       "from": "R7jzbRXe7DqDLjw-dyfl-199",
       "to": "R7jzbRXe7DqDLjw-dyfl-159",
-      "label": ""
-    },
-    {
-      "from": "R7jzbRXe7DqDLjw-dyfl-199",
-      "to": "R7jzbRXe7DqDLjw-dyfl-194",
       "label": ""
     },
     {
@@ -1237,6 +1278,61 @@
     {
       "from": "R7jzbRXe7DqDLjw-dyfl-236",
       "to": "R7jzbRXe7DqDLjw-dyfl-237",
+      "label": ""
+    },
+    {
+      "from": "8xFQxldSUPKBKKofMD4G-1",
+      "to": "R7jzbRXe7DqDLjw-dyfl-216",
+      "label": ""
+    },
+    {
+      "from": "R7jzbRXe7DqDLjw-dyfl-115",
+      "to": "8xFQxldSUPKBKKofMD4G-3",
+      "label": ""
+    },
+    {
+      "from": "8xFQxldSUPKBKKofMD4G-3",
+      "to": "R7jzbRXe7DqDLjw-dyfl-30",
+      "label": ""
+    },
+    {
+      "from": "R7jzbRXe7DqDLjw-dyfl-188",
+      "to": "8xFQxldSUPKBKKofMD4G-8",
+      "label": ""
+    },
+    {
+      "from": "8xFQxldSUPKBKKofMD4G-9",
+      "to": "8xFQxldSUPKBKKofMD4G-8",
+      "label": ""
+    },
+    {
+      "from": "R7jzbRXe7DqDLjw-dyfl-134",
+      "to": "R7jzbRXe7DqDLjw-dyfl-22",
+      "label": ""
+    },
+    {
+      "from": "R7jzbRXe7DqDLjw-dyfl-134",
+      "to": "8xFQxldSUPKBKKofMD4G-13",
+      "label": ""
+    },
+    {
+      "from": "R7jzbRXe7DqDLjw-dyfl-30",
+      "to": "R7jzbRXe7DqDLjw-dyfl-159",
+      "label": ""
+    },
+    {
+      "from": "8xFQxldSUPKBKKofMD4G-35",
+      "to": "R7jzbRXe7DqDLjw-dyfl-148",
+      "label": ""
+    },
+    {
+      "from": "8xFQxldSUPKBKKofMD4G-37",
+      "to": "R7jzbRXe7DqDLjw-dyfl-15",
+      "label": ""
+    },
+    {
+      "from": "R7jzbRXe7DqDLjw-dyfl-78",
+      "to": "R7jzbRXe7DqDLjw-dyfl-82",
       "label": ""
     }
   ]
