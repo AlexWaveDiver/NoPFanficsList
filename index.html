@@ -37,6 +37,14 @@
       z-index: 10;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
+
+    .nsfwdisclaimer {
+      background-color: #ff69b4;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
   </style>
 </head>
 
@@ -101,7 +109,7 @@
               `;
 
               if (node.NSFW) {
-                popup.innerHTML = `NOTE: This story is flagged <strong>NSFW</strong>!<br /><br />${popup.innerHTML}`;
+                popup.innerHTML = `<span class='nsfwdisclaimer'>NOTE: This story is flagged <strong>NSFW</strong>!</span><br /><br />${popup.innerHTML}`;
               }
 
               popup.style.left = pointer.x + 10 + "px";
