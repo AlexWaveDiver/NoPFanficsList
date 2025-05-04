@@ -84,7 +84,8 @@
               const pointer = params.pointer.DOM;
               popup.innerHTML = `
                 <strong>${node.label}</strong><br>
-                <a href="${node.url}" target="_blank" style="color:lightblue;">Open Link</a>
+                By ${node.author}.
+                <a href="${node.url}" target="_blank" style="color:lightblue;">Read it here!</a>
               `;
               popup.style.left = pointer.x + 10 + "px";
               popup.style.top = pointer.y + 10 + "px";
