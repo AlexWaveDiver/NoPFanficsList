@@ -99,6 +99,11 @@
                 By ${node.author}.<br /><br />
                 <a href="${node.url}" target="_blank" style="color:lightblue;">Read it here!</a>
               `;
+
+              if (node.NSFW) {
+                popup.innerHTML = `NOTE: This story is flagged <strong>NSFW</strong>!<br /><br />${popup.innerHTML}`;
+              }
+
               popup.style.left = pointer.x + 10 + "px";
               popup.style.top = pointer.y + 10 + "px";
               popup.style.display = "block";
