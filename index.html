@@ -95,8 +95,8 @@
             if (node && node.url) {
               const pointer = params.pointer.DOM;
               popup.innerHTML = `
-                <strong>${node.label}</strong><br>
-                By ${node.author}.
+                <strong>${node.label}</strong><br />
+                By ${node.author}.<br /><br />
                 <a href="${node.url}" target="_blank" style="color:lightblue;">Read it here!</a>
               `;
               popup.style.left = pointer.x + 10 + "px";
