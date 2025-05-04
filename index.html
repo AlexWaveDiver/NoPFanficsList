@@ -94,10 +94,10 @@
 
             if (node && node.url) {
               const pointer = params.pointer.DOM;
-              popup.innerHTML = `
+              popup.innerHTML = `<div style='text-align: center'>
                 <strong>${node.label}</strong><br />
                 By ${node.author}.<br /><br />
-                <a href="${node.url}" target="_blank" style="color:lightblue;">Read it here!</a>
+                <a href="${node.url}" target="_blank" style="color:lightblue;">Read it here!</a></div>
               `;
 
               if (node.NSFW) {
